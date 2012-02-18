@@ -26,7 +26,7 @@ public class GPSPositionSimulatorActivity extends MapActivity {
 	private MapView mapView;
 	private MyItemizedOverlay itemizedoverlay;
 	private OverlayItem overlayitem; 
-	private static String PING_MOCK_LOCATION = "PING_MOCK_LOCATION";
+
 	
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +61,7 @@ public class GPSPositionSimulatorActivity extends MapActivity {
             		navigateToLocation(p, mapView);
             		mapView.invalidate();
             		
-            		Intent serviceIntent = new Intent( "PING_USER_ACTION" );   
+            		Intent serviceIntent = new Intent( "com.pingme.PingMeService.PING_ACTION_MOCK_LOCATION" );   
             		serviceIntent.setClassName("com.pingme", "com.pingme.PingMeService");
 //            		
 //            		serviceIntent.setClassName( GPSPositionSimulatorActivity.this, "com.pingme.PingMeService" );     
